@@ -10,7 +10,10 @@ import SwiftUI
 struct ContentView: View {
     var body: some View {
         ZStack {
-            LinearGradient(gradient: Gradient(colors: [.blue, .white]), startPoint: .topLeading, endPoint: .bottomTrailing)
+            LinearGradient(gradient: Gradient(colors: [.blue, .white, .green]),
+                           startPoint: .topLeading,
+                           endPoint: .bottomTrailing)
+                .blur(radius: 30, opaque: true)
                 .edgesIgnoringSafeArea(.all)
         }
     }
