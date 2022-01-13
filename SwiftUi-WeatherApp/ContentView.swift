@@ -50,6 +50,10 @@ struct ContentView: View {
                     print("Tapped")
                 } label: {
                     Text("Change Day Time")
+                        .frame(width: 280, height: 70)
+                        .background(Color.white.opacity(0.9))
+                        .font(.system(size: 30, weight: .medium, design: .default))
+                        .cornerRadius(30)
                 }
                 
                 Spacer()
