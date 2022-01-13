@@ -10,11 +10,7 @@ import SwiftUI
 struct ContentView: View {
     var body: some View {
         ZStack {
-            LinearGradient(gradient: Gradient(colors: [.red, .blue, .white, .green]),
-                           startPoint: .topLeading,
-                           endPoint: .bottomTrailing)
-                .blur(radius: 100, opaque: true)
-                .edgesIgnoringSafeArea(.all)
+            BackgroundView(topColor: .red, middleColor1: .blue, middleColor2: .white, bottomColor: .green)
             VStack {
                 Text("Cuppertino, CA")
                     .font(.system(size: 29, weight: .medium, design: .default))
@@ -90,5 +86,20 @@ struct WeatherDayView: View {
                 .font(.system(size: 22, weight: .medium))
                 .foregroundColor(.white)
         }
+    }
+}
+
+struct BackgroundView: View {
+    var topColor: Color
+    var middleColor1: Color
+    var middleColor2: Color
+    var bottomColor: Color
+    
+    var body: some View {
+        LinearGradient(gradient: Gradient(colors: [topColor, middleColor1, middleColor2, bottomColor]),
+                       startPoint: .topLeading,
+                       endPoint: .bottomTrailing)
+            .blur(radius: 100, opaque: true)
+            .edgesIgnoringSafeArea(.all)
     }
 }
