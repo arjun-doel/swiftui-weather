@@ -27,7 +27,7 @@ struct ContentView: View {
                 }
                 .padding(10)
                 .frame(minWidth: 0, maxWidth: .infinity)
-                .background(Color.blue.opacity(0.2))
+                .background(Color.blue.opacity(isNight ? 0.2 : 0))
                 
                 Spacer()
                 
@@ -68,7 +68,7 @@ struct WeatherDayView: View {
                 .renderingMode(.original)
                 .resizable()
                 .aspectRatio(contentMode: .fit)
-                .frame(width: 40, height: 40)
+                .frame(width: 28, height: 28)
             
             
             Text("\(temperature)℃")
