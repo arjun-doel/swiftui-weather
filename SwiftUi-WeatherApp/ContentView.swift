@@ -10,11 +10,18 @@ import SwiftUI
 struct ContentView: View {
     var body: some View {
         ZStack {
-            LinearGradient(gradient: Gradient(colors: [.blue, .white, .green]),
+            LinearGradient(gradient: Gradient(colors: [.red, .blue, .white, .green]),
                            startPoint: .topLeading,
                            endPoint: .bottomTrailing)
-                .blur(radius: 30, opaque: true)
+                .blur(radius: 100, opaque: true)
                 .edgesIgnoringSafeArea(.all)
+            VStack {
+                Text("Cuppertino, CA")
+                    .font(.system(size: 29, weight: .medium, design: .default))
+                    .foregroundColor(.white)
+                    .padding()
+                Spacer()
+            }
         }
     }
 }
